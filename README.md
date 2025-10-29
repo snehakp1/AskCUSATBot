@@ -1,24 +1,19 @@
 # 🎓 AskCUSATBot  
 ### RAG-based AI Chatbot for CUSAT Statistics Department Information  
 
-
-
 ## 📘 Overview  
 **AskCUSATBot** is an intelligent, **Retrieval-Augmented Generation (RAG)** chatbot designed to provide quick and accurate answers about the **Department of Statistics**, Cochin University of Science and Technology (CUSAT).  
 
 It integrates **LangChain**, **Hugging Face embeddings**, and **Google Gemini** to create a powerful conversational agent that retrieves verified departmental information and presents it in a human-like way through a **Streamlit** web interface.
 
-
-
 ## 🚀 Features  
-- 🔍 **Context-aware answers** from official department sources  
-- 🤖 **Gemini-powered AI responses**  
-- 🧠 **Chroma vector database** for efficient semantic search  
-- 💬 **Streamlit-based chat UI**  
-- ⚡ **Cached embeddings** to speed up performance  
-- 🔐 **Environment-based API key management**
-
-
+- 🔍 **Context-aware answers** retrieved from verified departmental sources  
+- 🧠 **Re-ranking mechanism** to improve the accuracy and relevance of retrieved information  
+- 🤖 **Gemini-powered AI responses** for clear and natural language generation  
+- 💾 **Chroma vector database** for efficient semantic search and retrieval  
+- 💬 **Streamlit-based chat UI** for an interactive, conversational experience  
+- ⚡ **Cached embeddings** to optimize speed and performance  
+- 🔐 **Environment-based API key management** for secure configuration  
 
 ## 🏗️ Repository Structure  
 
@@ -35,8 +30,6 @@ AskCUSATBot/
 ├── .gitignore              # Ignored files and folders
 └── data/                   # Persisted Chroma vector database
 ```
-
-
 
 ## ⚙️ Installation & Setup  
 
@@ -59,7 +52,7 @@ pip install -r requirements.txt
 ```
 
 ### 4️⃣ Set Up Environment Variables  
-Create a `.env` file and add your Google API key:  
+Rename the `.envexample` file to `.env` file and add your Google API key:  
 ```
 GOOGLE_API_KEY=your_google_api_key_here
 ```
@@ -68,8 +61,6 @@ GOOGLE_API_KEY=your_google_api_key_here
 ```bash
 streamlit run main.py
 ```
-
-
 
 ## 🧩 How It Works  
 
@@ -92,7 +83,6 @@ streamlit run main.py
    The Streamlit app shows the conversation in a chat-style interface.  
 
 
-
 ## 🧠 Tech Stack  
 
 | Component | Technology |
@@ -107,15 +97,8 @@ streamlit run main.py
 | **Environment Handling** | python-dotenv |
 
 
-
 ## 🌐 Data Sources  
-AskCUSATBot currently retrieves and processes information from:  
-- [CUSAT Main Statistics Page](https://www.cusat.ac.in/stats.php)  
-- [Department of Statistics – About](https://stats.cusat.ac.in/index.php/About)  
-- [Department of Statistics – Courses](https://stats.cusat.ac.in/index.php/Courses)  
-- [Department of Statistics – Faculty](https://stats.cusat.ac.in/index.php/Faculty)  
-
-
+AskCUSATBot currently retrieves and processes information from department websites and documents.  
 
 ## 💬 Example Queries  
 - “Who is the Head of the Department?”  
@@ -123,19 +106,12 @@ AskCUSATBot currently retrieves and processes information from:
 - “What are the eligibility criteria for M.Sc. Statistics?”  
 - “Where is the department located?”  
 
-
-
 ## 🧰 Future Improvements  
 - 🗂️ Support for departmental PDFs and circulars  
 - 🗣️ Voice or multilingual support  
 - 🧑‍🎓 Integration with student services (exam, timetable queries)  
 - ☁️ Cloud deployment on Streamlit Cloud or Hugging Face Spaces  
 
-
-
 ## 👨‍💻 Authors  
 Developed by **Sneha KP**  
 Department of Statistics, CUSAT  
-
-
-
