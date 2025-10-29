@@ -42,7 +42,7 @@ AskCUSATBot/
 
 ### 1️⃣ Clone the Repository  
 ```bash
-git clone https://github.com/yourusername/AskCUSATBot.git
+git clone https://github.com/snehakp1/AskCUSATBot.git
 cd AskCUSATBot
 ```
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 
 ### 4️⃣ Set Up Environment Variables  
-Create a `.env` file in the **src/** directory and add your Google API key:  
+Create a `.env` file and add your Google API key:  
 ```
 GOOGLE_API_KEY=your_google_api_key_here
 ```
