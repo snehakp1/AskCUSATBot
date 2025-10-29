@@ -1,21 +1,7 @@
-# import streamlit as st
-# from src.rag import gemini_answer
-
-# st.set_page_config(page_title="Department Chatbot", page_icon="🎓")
-
-# def main():
-#     st.title("🎓 AI Chatbot for Statistics Departmental Information")
-#     user_input = st.chat_input("Ask your question:")
-#     if user_input:
-#         st.write( gemini_answer(user_input))
-
-# # if __name__ == "__main__":
-# main()
-
 import streamlit as st
 from src.rag import gemini_answer
 
-st.set_page_config(page_title="Department Chatbot", page_icon="🎓")
+st.set_page_config(page_title="AskCUSATBot", page_icon="🎓")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -23,7 +9,7 @@ if "messages" not in st.session_state:
         {"role": "assistant", "content": "👋 Hi! I'm your Department Chatbot. How can I help you today?"}
     ]
 
-st.title("🎓 AI Chatbot for Statistics Departmental Information")
+st.title("🎓 AskCUSATBot")
 
 # Display chat messages
 for msg in st.session_state.messages:

@@ -7,13 +7,30 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
-# Data source URLs
+# data source URLs
 urls = [
-            "https://www.cusat.ac.in/stats.php",
-            "https://stats.cusat.ac.in/index.php/About",
-            "https://stats.cusat.ac.in/index.php/Courses",
-            "https://stats.cusat.ac.in/index.php/Faculty",
-        ]
+    "https://www.cusat.ac.in/stats.php",
+    "https://stats.cusat.ac.in/index.php/About",
+    "https://stats.cusat.ac.in/index.php/Courses",
+    "https://stats.cusat.ac.in/index.php/Faculty",
+    "https://stats.cusat.ac.in/index.php/Facilities",
+    "https://stats.cusat.ac.in/index.php/News",
+    "https://stats.cusat.ac.in/index.php/Contact",
+    "https://stats.cusat.ac.in/index.php/Bodies",
+    "https://stats.cusat.ac.in/index.php/About/alumni",
+    "https://stats.cusat.ac.in/index.php/Activities/award",
+    "https://stats.cusat.ac.in/index.php/Courses/details/8",
+    "https://stats.cusat.ac.in/index.php/Courses/details/1",
+    "https://stats.cusat.ac.in/index.php/Courses/details/7",
+    "https://stats.cusat.ac.in/index.php/Courses/details/7",
+    "https://iqac.cusat.ac.in/Web/profile_view/190/Prof.Dr.KCJAMES",
+    "https://iqac.cusat.ac.in/Web/profile_view/203/Prof.Dr.ASHAGOPALAKRISHNAN",
+    "https://iqac.cusat.ac.in/Web/profile_view/309/Prof.PGSANKARAN",
+    "https://iqac.cusat.ac.in/Web/profile_view/204/Dr.RAJESHG",
+    "https://iqac.cusat.ac.in/Web/profile_view/217/Dr.IRSHADMR",
+    "https://iqac.cusat.ac.in/Web/profile_view/437/Dr.PRINCYT",
+    "https://iqac.cusat.ac.in/Web/profile_view/162/Prof.Dr.NBALAKRISHNA",
+]
 
 @st.cache_resource 
 def load_embedding():
@@ -40,9 +57,8 @@ def create_vector_db():
     return vectorstore
 
 def load_vector_db():
+    """Load or create the Chroma vector database."""
     if not os.path.exists("data/chroma_db"):
         logger.info("Creating new vectorstore...")
         create_vector_db()
-    return Chroma(persist_directory="./data/chroma_db", embedding_function=embeddings)
-
-    
+    return Chroma(persist_directory="./data/chroma_db", embedding_function=embeddings) 
