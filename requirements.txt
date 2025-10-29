@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+langchain-google-genai
+langchain-community
+sentence-transformers
+dotenv
+unstructured
+chromadb
+langchain-google-genai
+loguru
+huggingface-hub
+streamlit
+transformers
+PyMuPDF
