@@ -1,7 +1,13 @@
 import streamlit as st
 from src.rag import gemini_answer
 
-st.set_page_config(page_title="AskCUSATBot", page_icon="🎓")
+st.set_page_config(
+    page_title="AskCUSATBot",
+    page_icon="🎓",
+    layout="wide",
+    initial_sidebar_state="auto"
+)
+
 
 # Initialize Session State
 if "messages" not in st.session_state:
